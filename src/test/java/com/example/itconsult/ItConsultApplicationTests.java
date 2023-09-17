@@ -9,7 +9,7 @@ import org.springframework.test.web.servlet.MockMvc;
 @SpringBootTest
 @WebMvcTest
 class ItConsultApplicationTests {
-    
+
     private MockMvc mockMvc;
 
     @Test
