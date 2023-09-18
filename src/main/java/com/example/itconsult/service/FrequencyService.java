@@ -47,7 +47,7 @@ public class FrequencyService {
 
 */
         Map<Character, Integer> frequencyMap = new HashMap<>();
-        assert jsonParsing(string).getText() != null;
+        //assert jsonParsing(string).getText() != null;
         for (char c : jsonParsing(string).getText().toCharArray()) {
             if (c != ' ') {
                 frequencyMap.put(c, frequencyMap.getOrDefault(c, 0) + 1);
