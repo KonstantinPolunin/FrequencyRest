@@ -16,10 +16,9 @@ public class FrequencyRestController {
     }
 
     @PostMapping("/api/frequency")
-    public ResponseEntity create(@RequestBody String text) {
+    public ResponseEntity calculateFrequency(@RequestBody String text) {
         return new ResponseEntity<>(service.calculateFrequency(text), HttpStatus.OK);
+
     }
-
-
 
 }
