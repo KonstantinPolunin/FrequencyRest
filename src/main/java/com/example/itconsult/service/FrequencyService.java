@@ -26,28 +26,9 @@ public class FrequencyService {
     }
 
     public Map<Character, Integer> calculateFrequency(String string) {
-        /*String fieldValue = null;
 
-        try {
-            JsonFactory factory = new JsonFactory();
-            JsonParser parser = factory.createParser(text);
-
-            while (!parser.isClosed()) {
-                JsonToken jsonToken = parser.nextToken();
-
-                if (jsonToken == JsonToken.FIELD_NAME) {
-                    parser.nextToken();
-                    fieldValue = parser.getText();
-                }
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-*/
         Map<Character, Integer> frequencyMap = new HashMap<>();
-        //assert jsonParsing(string).getText() != null;
+
         for (char c : jsonParsing(string).getText().toCharArray()) {
             if (c != ' ') {
                 frequencyMap.put(c, frequencyMap.getOrDefault(c, 0) + 1);
@@ -60,8 +41,6 @@ public class FrequencyService {
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
                         (oldValue, newValue) -> oldValue, LinkedHashMap::new));
     }
-
-
 
 
 }
